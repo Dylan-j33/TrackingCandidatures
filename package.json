@@ -1,0 +1,23 @@
+{
+  "name": "trackingcandidatures",
+  "version": "1.0.0",
+  "description": "🔹 Fonctionnalités principales :",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dylan-j33/TrackingCandidatures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dylan-j33/TrackingCandidatures/issues"
+  },
+  "homepage": "https://github.com/Dylan-j33/TrackingCandidatures#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
