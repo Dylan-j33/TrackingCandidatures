@@ -7,3 +7,5 @@
 📊 Stats & graphiques : Suivi des candidatures (taux de réponse, entreprises relancées…).
 📄 Exportation : Générer un CSV / intégration Google Sheets.
 📱 Mobile-friendly : Interface optimisée pour téléphone.
+
+Lancer le serveur : npx nodemon server.js
