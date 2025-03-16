@@ -1,0 +1,68 @@
+/* Variables pour les couleurs */
+$vert-accepte: #4CAF50;
+$rouge-refuse: #F44336;
+$jaune-entretien: #FFEB3B;
+$gris-attente: #9E9E9E;
+$bleu-prevu: #2196F3;
+$violet-passe: #9C27B0;
+$orange-planifier: #FF9800;
+
+/* Style général du tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Couleurs dynamiques pour le retour */
+.retour-accepte {
+  background-color: $vert-accepte;
+  color: white;
+}
+
+.retour-refuse {
+  background-color: $rouge-refuse;
+  color: white;
+}
+
+.retour-entretien {
+  background-color: $jaune-entretien;
+  color: black;
+}
+
+.retour-attente {
+  background-color: $gris-attente;
+  color: white;
+}
+
+/* Couleurs dynamiques pour l'entretien */
+.entretien-prevu {
+  background-color: $bleu-prevu;
+  color: white;
+}
+
+.entretien-passe {
+  background-color: $violet-passe;
+  color: white;
+}
+
+.entretien-planifier {
+  background-color: $orange-planifier;
+  color: white;
+}
+
+/* Style général pour le corps du tableau */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}

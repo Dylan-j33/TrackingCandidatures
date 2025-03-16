@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 
 // Middleware pour parser les requêtes JSON
-app.use(express.json());
+app.use(express.static('public'));
 
 // Définition du port
 const port = 3000;

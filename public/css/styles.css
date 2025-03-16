@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* Variables pour les couleurs */
+/* Style général du tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Couleurs dynamiques pour le retour */
+.retour-accepte {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.retour-refuse {
+  background-color: #F44336;
+  color: white;
+}
+
+.retour-entretien {
+  background-color: #FFEB3B;
+  color: black;
+}
+
+.retour-attente {
+  background-color: #9E9E9E;
+  color: white;
+}
+
+/* Couleurs dynamiques pour l'entretien */
+.entretien-prevu {
+  background-color: #2196F3;
+  color: white;
+}
+
+.entretien-passe {
+  background-color: #9C27B0;
+  color: white;
+}
+
+.entretien-planifier {
+  background-color: #FF9800;
+  color: white;
+}
+
+/* Style général pour le corps du tableau */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/*# sourceMappingURL=styles.css.map */
