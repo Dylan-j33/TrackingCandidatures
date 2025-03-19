@@ -4,30 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrackingCandidatures</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Lien vers le fichier CSS compilé -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
   <h1>Liste des Candidatures</h1>
   <table id="candidaturesTable">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Date d'envoi</th>
-        <th>Entreprise</th>
-        <th>Lieu</th>
-        <th>Nom du Contact</th>
-        <th>Mail Contact</th>
-        <th>Fonction Contact</th>
-        <th>Retour</th>
-        <th>Commentaires</th>
-        <th>Origine du Contact</th>
-        <th>Relance</th>
-        <th>Entretien</th>
-      </tr>
-    </thead>
-    <tbody id="table-body">
-      <!-- Les lignes seront ajoutées dynamiquement ici -->
-    </tbody>
+      <thead>
+          <tr>
+              <th>Date d'envoi</th>
+              <th>Entreprise</th>
+              <th>Lieu</th>
+              <th>Nom du Contact</th>
+              <th>Mail Contact</th>
+              <th>Fonction Contact</th>
+              <th>Retour</th>
+              <th>Commentaires</th>
+              <th>Origine du Contact</th>
+              <th>Relance</th>
+              <th>Entretien</th>
+          </tr>
+      </thead>
+      <tbody id="table-body">
+          <!-- Les lignes seront ajoutées dynamiquement ici -->
+      </tbody>
+      <tfoot>
+          <tr>
+              <td colspan="11">
+                  <h2>Ajouter une candidature</h2>
+                  <form id="add-candidature-form">
+                      <input type="text" id="entreprise" placeholder="Entreprise" required>
+                      <input type="text" id="lieu" placeholder="Lieu" required>
+                      <input type="text" id="nomContact" placeholder="Nom du contact">
+                      <input type="email" id="mailContact" placeholder="E-mail du contact">
+                      <textarea id="commentaires" placeholder="Commentaires"></textarea>
+                      <input type="text" id="origineContact" placeholder="Origine du contact">
+                      <label>
+                          Relance :
+                          <input type="checkbox" id="relance">
+                      </label>
+                      <button type="submit" class="btn ajouter">Ajouter</button>
+                  </form>
+              </td>
+          </tr>
+      </tfoot>
   </table>
 
   <script src="js/script.js"></script> <!-- Lien vers le fichier JavaScript -->

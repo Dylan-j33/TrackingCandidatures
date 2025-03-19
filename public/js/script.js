@@ -1,60 +1,71 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const tableBody = document.getElementById("table-body");
+    const addCandidatureForm = document.getElementById("add-candidature-form");
+
+    // Fonction pour afficher les candidatures dans le tableau
+    function afficherCandidatures(candidatures) {
+        tableBody.innerHTML = ""; // Effacer les anciennes lignes
+        candidatures.forEach(candidature => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${new Date(candidature.dateEnvoie).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}</td>
+                <td>${candidature.entreprise}</td>
+                <td>${candidature.lieu}</td>
+                <td>${candidature.nomContact}</td>
+                <td>${candidature.mailContact}</td>
+                <td>${candidature.fonctionContact}</td>
+                <td>${candidature.retour}</td>
+                <td>${candidature.commentaires}</td>
+                <td>${candidature.origineContact}</td>
+                <td>${candidature.relance ? "Oui" : "Non"}</td>
+                <td>${candidature.entretien}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Charger les candidatures depuis le serveur
     fetch("http://localhost:3000/candidatures")
         .then(response => response.json())
         .then(candidatures => {
-            const tableBody = document.getElementById("table-body");
-
-            candidatures.forEach(candidature => {
-                const row = document.createElement("tr");
-
-                row.innerHTML = `
-                    <td>${candidature.id}</td>
-                    <td>${candidature.dateEnvoie}</td>
-                    <td>${candidature.entreprise}</td>
-                    <td>${candidature.lieu}</td>
-                    <td>${candidature.nomContact}</td>
-                    <td>${candidature.mailContact}</td>
-                    <td>${candidature.fonctionContact || "N/A"}</td>
-                    <td class="retour ${getRetourClass(candidature.retour)}">${candidature.retour}</td>
-                    <td>${candidature.commentaires}</td>
-                    <td>${candidature.origineContact}</td>
-                    <td>${candidature.relance ? "Oui" : "Non"}</td>
-                    <td class="entretien ${getEntretienClass(candidature.entretien)}">${candidature.entretien}</td>
-                `;
-
-                tableBody.appendChild(row);
-            });
+            afficherCandidatures(candidatures);
         })
         .catch(error => {
             console.error("Erreur lors du chargement des candidatures :", error);
-            alert("Impossible de charger les candidatures. Veuillez réessayer plus tard.");
         });
+
+    // Ajouter une nouvelle candidature
+    addCandidatureForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+        const nouvelleCandidature = {
+            entreprise: document.getElementById("entreprise").value,
+            lieu: document.getElementById("lieu").value,
+            nomContact: document.getElementById("nomContact").value,
+            mailContact: document.getElementById("mailContact").value,
+            commentaires: document.getElementById("commentaires").value,
+            origineContact: document.getElementById("origineContact").value,
+            relance: document.getElementById("relance").checked,
+            retour: "en attente", // Valeur par défaut
+            entretien: "à planifier", // Valeur par défaut
+            dateEnvoie: new Date().toISOString() // Date actuelle
+        };
+
+        // Envoyer la nouvelle candidature au serveur
+        fetch("http://localhost:3000/candidatures", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(nouvelleCandidature)
+        })
+        .then(response => response.json())
+        .then(candidature => {
+            // Ajouter la nouvelle candidature dans le tableau sans recharger la page
+            afficherCandidatures([...tableBody.children, candidature]);
+        })
+        .catch(error => {
+            console.error("Erreur lors de l'ajout de la candidature :", error);
+        });
+    });
 });
-
-// Fonction pour retourner une classe CSS en fonction du statut de retour
-function getRetourClass(retour) {
-    switch (retour.toLowerCase()) {
-        case "accepté":
-            return "retour-accepte";
-        case "refusé":
-            return "retour-refuse";
-        case "entretien prévu":
-            return "retour-entretien";
-        case "en attente":
-        default:
-            return "retour-attente";
-    }
-}
-
-// Fonction pour retourner une classe CSS en fonction du statut d'entretien
-function getEntretienClass(entretien) {
-    switch (entretien.toLowerCase()) {
-        case "prévu":
-            return "entretien-prevu";
-        case "passé":
-            return "entretien-passe";
-        case "à planifier":
-        default:
-            return "entretien-planifier";
-    }
-}

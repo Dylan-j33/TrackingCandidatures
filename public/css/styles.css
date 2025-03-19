@@ -1,63 +1,121 @@
-@charset "UTF-8";
-/* Variables pour les couleurs */
-/* Style général du tableau */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1e1e2e;
+  color: #e0e0e0;
+  margin: 20px;
+  text-align: center;
+}
+
 table {
-  width: 100%;
+  width: 90%;
+  margin: 20px auto;
   border-collapse: collapse;
-  margin-top: 20px;
+  background: #252535;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
-
-th, td {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ddd;
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #33334d;
 }
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-/* Couleurs dynamiques pour le retour */
-.retour-accepte {
+table th {
   background-color: #4CAF50;
   color: white;
+  text-transform: uppercase;
+}
+table tr:nth-child(even) {
+  background-color: rgb(40.0657894737, 40.0657894737, 61.4342105263);
+}
+table tr:hover {
+  background-color: #33334d;
 }
 
-.retour-refuse {
-  background-color: #F44336;
-  color: white;
+.retour, .entretien {
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: inline-block;
 }
-
-.retour-entretien {
-  background-color: #FFEB3B;
+.retour-accepte, .entretien-accepte {
+  background-color: rgb(109.9800796813, 192.0199203187, 113.2948207171);
+  color: black;
+}
+.retour-refuse, .entretien-refuse {
+  background-color: rgb(227.5316455696, 96.4683544304, 109.0253164557);
+  color: black;
+}
+.retour-attente, .entretien-attente {
+  background-color: rgb(255, 205.75, 58);
+  color: black;
+}
+.retour-entretien, .entretien-entretien {
+  background-color: rgb(31, 200.2173913043, 227);
   color: black;
 }
 
-.retour-attente {
-  background-color: #9E9E9E;
-  color: white;
+#add-candidature-form {
+  width: 90%;
+  margin: 20px auto;
+  background: #252535;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Couleurs dynamiques pour l'entretien */
-.entretien-prevu {
-  background-color: #2196F3;
-  color: white;
+#add-candidature-form input,
+#add-candidature-form textarea {
+  padding: 10px;
+  border: 1px solid #33334d;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px;
+  background: #1e1e2e;
+  color: #e0e0e0;
 }
 
-.entretien-passe {
-  background-color: #9C27B0;
+#add-candidature-form button {
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
-.entretien-planifier {
-  background-color: #FF9800;
-  color: white;
+#add-candidature-form button:hover {
+  background-color: rgb(109.9800796813, 192.0199203187, 113.2948207171);
 }
 
-/* Style général pour le corps du tableau */
-tbody tr:hover {
-  background-color: #f1f1f1;
+@media (max-width: 768px) {
+  #add-candidature-form {
+    width: 100%;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn.ajouter {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn.supprimer {
+  background-color: #dc3545;
+  color: white;
+}
+.btn:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=styles.css.map */

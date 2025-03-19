@@ -1,68 +1,133 @@
-/* Variables pour les couleurs */
-$vert-accepte: #4CAF50;
-$rouge-refuse: #F44336;
-$jaune-entretien: #FFEB3B;
-$gris-attente: #9E9E9E;
-$bleu-prevu: #2196F3;
-$violet-passe: #9C27B0;
-$orange-planifier: #FF9800;
+// Variables de couleur
+$background-dark: #1e1e2e;
+$table-background: #252535;
+$text-color: #e0e0e0;
+$border-color: #33334d;
+$hover-color: #33334d;
+$primary-color: #4CAF50;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
 
-/* Style général du tableau */
+// Reset & Body
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $background-dark;
+    color: $text-color;
+    margin: 20px;
+    text-align: center;
+}
+
+// Style du tableau
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: $table-background;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+
+    th, td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid $border-color;
+    }
+
+    th {
+        background-color: $primary-color;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+        background-color: lighten($background-dark, 5%);
+    }
+
+    tr:hover {
+        background-color: $hover-color;
+    }
 }
 
-th, td {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ddd;
+// Styles spécifiques pour les statuts
+.retour, .entretien {
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &-accepte { background-color: lighten($primary-color, 10%); color: black; }
+    &-refuse { background-color: lighten($danger-color, 10%); color: black; }
+    &-attente { background-color: lighten($warning-color, 10%); color: black; }
+    &-entretien { background-color: lighten($info-color, 10%); color: black; }
 }
 
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
+// Style du formulaire ajouté sous le tableau
+#add-candidature-form {
+    width: 90%;
+    margin: 20px auto;
+    background: $table-background;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Couleurs dynamiques pour le retour */
-.retour-accepte {
-  background-color: $vert-accepte;
-  color: white;
+#add-candidature-form input,
+#add-candidature-form textarea {
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 14px;
+    background: $background-dark;
+    color: $text-color;
 }
 
-.retour-refuse {
-  background-color: $rouge-refuse;
-  color: white;
+#add-candidature-form button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-.retour-entretien {
-  background-color: $jaune-entretien;
-  color: black;
+#add-candidature-form button:hover {
+    background-color: lighten($primary-color, 10%);
 }
 
-.retour-attente {
-  background-color: $gris-attente;
-  color: white;
+// Champs de formulaire responsive
+@media (max-width: 768px) {
+    #add-candidature-form {
+        width: 100%;
+    }
 }
 
-/* Couleurs dynamiques pour l'entretien */
-.entretien-prevu {
-  background-color: $bleu-prevu;
-  color: white;
-}
+// Boutons stylisés pour actions
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &.ajouter {
+        background-color: $primary-color;
+        color: white;
+    }
 
-.entretien-passe {
-  background-color: $violet-passe;
-  color: white;
-}
+    &.supprimer {
+        background-color: $danger-color;
+        color: white;
+    }
 
-.entretien-planifier {
-  background-color: $orange-planifier;
-  color: white;
-}
-
-/* Style général pour le corps du tableau */
-tbody tr:hover {
-  background-color: #f1f1f1;
+    &:hover {
+        opacity: 0.8;
+    }
 }

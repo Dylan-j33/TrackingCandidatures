@@ -1,76 +1,112 @@
 [
-  [
-    {
-      "dateEnvoie": "2023-02-10",
-      "entreprise": "DevTech",
-      "lieu": "Paris",
-      "nomContact": "Alice Dupont",
-      "mailContact": "alice@devtech.com",
-      "retour": "en attente",
-      "commentaires": "Entretien prévu la semaine prochaine",
-      "origineContact": "Site Web",
-      "relance": false,
-      "entretien": "à planifier"
-    },
-    {
-      "dateEnvoie": "2023-03-02",
-      "entreprise": "InnovCorp",
-      "lieu": "Lyon",
-      "nomContact": "Jean Martin",
-      "mailContact": "jean@innovcorp.com",
-      "retour": "rejeté",
-      "commentaires": "Le poste est pourvu.",
-      "origineContact": "LinkedIn",
-      "relance": false,
-      "entretien": "non prévu"
-    },
-    {
-      "dateEnvoie": "2023-01-20",
-      "entreprise": "TechFuture",
-      "lieu": "Marseille",
-      "nomContact": "Sophie Leblanc",
-      "mailContact": "sophie@techfuture.com",
-      "retour": "en attente",
-      "commentaires": "En attente de réponse",
-      "origineContact": "Annonce sur job board",
-      "relance": true,
-      "entretien": "à planifier"
-    },
-    {
-      "dateEnvoie": "2023-04-01",
-      "entreprise": "WebSolutions",
-      "lieu": "Bordeaux",
-      "nomContact": "Marc Durand",
-      "mailContact": "marc@websolutions.com",
-      "retour": "accepté",
-      "commentaires": "Proposition acceptée, en attente du contrat.",
-      "origineContact": "Référence d'un ami",
-      "relance": false,
-      "entretien": "signé"
-    },
-    {
-      "dateEnvoie": "2023-05-12",
-      "entreprise": "CyberVision",
-      "lieu": "Nice",
-      "nomContact": "Lucie Perez",
-      "mailContact": "lucie@cybervision.com",
-      "retour": "en attente",
-      "commentaires": "En cours de validation des références",
-      "origineContact": "Job Fair",
-      "relance": true,
-      "entretien": "à planifier"
-    },
-    {
-      "dateEnvoie": "2023-03-28",
-      "entreprise": "CreativeLab",
-      "lieu": "Toulouse",
-      "nomContact": "Thierry Dupuis",
-      "mailContact": "thierry@creativelab.com",
-      "retour": "rejeté",
-      "commentaires": "Candidature rejetée, manque d'expérience.",
-      "origineContact": "LinkedIn",
-      "relance": false,
-      "entretien": "non prévu"
-    }
-  ]
+  {
+    "dateEnvoie": "2023-02-10",
+    "entreprise": "DevTech",
+    "lieu": "Paris",
+    "nomContact": "Alice Dupont",
+    "mailContact": "alice@devtech.com",
+    "retour": "en attente",
+    "commentaires": "Entretien prévu la semaine prochaine",
+    "origineContact": "Site Web",
+    "relance": false,
+    "entretien": "à planifier"
+  },
+  {
+    "dateEnvoie": "2023-03-02",
+    "entreprise": "InnovCorp",
+    "lieu": "Lyon",
+    "nomContact": "Jean Martin",
+    "mailContact": "jean@innovcorp.com",
+    "retour": "refusé",
+    "commentaires": "Le poste est pourvu.",
+    "origineContact": "LinkedIn",
+    "relance": false,
+    "entretien": "à planifier"
+  },
+  {
+    "dateEnvoie": "2023-01-20",
+    "entreprise": "TechFuture",
+    "lieu": "Marseille",
+    "nomContact": "Sophie Leblanc",
+    "mailContact": "sophie@techfuture.com",
+    "retour": "en attente",
+    "commentaires": "En attente de réponse",
+    "origineContact": "Annonce sur job board",
+    "relance": true,
+    "entretien": "à planifier"
+  },
+  {
+    "dateEnvoie": "2023-04-01",
+    "entreprise": "WebSolutions",
+    "lieu": "Bordeaux",
+    "nomContact": "Marc Durand",
+    "mailContact": "marc@websolutions.com",
+    "retour": "accepté",
+    "commentaires": "Proposition acceptée, en attente du contrat.",
+    "origineContact": "Référence d'un ami",
+    "relance": false,
+    "entretien": "passé"
+  },
+  {
+    "dateEnvoie": "2023-05-12",
+    "entreprise": "CyberVision",
+    "lieu": "Nice",
+    "nomContact": "Lucie Perez",
+    "mailContact": "lucie@cybervision.com",
+    "retour": "en attente",
+    "commentaires": "En cours de validation des références",
+    "origineContact": "Job Fair",
+    "relance": true,
+    "entretien": "à planifier"
+  },
+  {
+    "dateEnvoie": "2023-03-28",
+    "entreprise": "CreativeLab",
+    "lieu": "Toulouse",
+    "nomContact": "Thierry Dupuis",
+    "mailContact": "thierry@creativelab.com",
+    "retour": "refusé",
+    "commentaires": "Candidature rejetée, manque d'expérience.",
+    "origineContact": "LinkedIn",
+    "relance": false,
+    "entretien": "à planifier"
+  },
+  {
+    "dateEnvoie": "2025-03-19",
+    "entreprise": "StudioLab",
+    "lieu": "Bordeaux",
+    "nomContact": "madame MARCIANO",
+    "mailContact": "recrutement@studio-lab.fr",
+    "retour": "en attente",
+    "commentaires": "En attente de retour",
+    "origineContact": "LinkedIn",
+    "relance": false,
+    "entretien": "à planifier"
+  },
+  {
+    "entreprise": "test",
+    "lieu": "tes",
+    "nomContact": "tes",
+    "mailContact": "testes@gmail.com",
+    "commentaires": "rtge",
+    "origineContact": "berzbrez",
+    "relance": false,
+    "retour": "en attente",
+    "entretien": "à planifier",
+    "dateEnvoie": "2025-03-19T18:18:25.376Z",
+    "id": null
+  },
+  {
+    "entreprise": "reza",
+    "lieu": "cazer",
+    "nomContact": "cazer",
+    "mailContact": "aczerr@gmail.com",
+    "commentaires": "rzevrczae",
+    "origineContact": "crazerceza",
+    "relance": false,
+    "retour": "en attente",
+    "entretien": "à planifier",
+    "dateEnvoie": "2025-03-19T18:18:40.818Z",
+    "id": 1
+  }
 ]
